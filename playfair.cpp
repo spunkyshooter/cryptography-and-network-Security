@@ -119,12 +119,15 @@ vector<string> wordsIntoDiagrams(const string plainText){
 }
 
 string encryption(string plainText){
-    vector<string> diagrams = wordsIntoDiagrams(plainText);
+     // we can use this, since we won't be having any repeated letters in a diagram.
+    vector<string> diagrams = wordsIntoDiagrams(plainText); 
+   
     string cipherText = "";
     for(string diagram: diagrams){
         string cipherTextDiagram = "";
         pair<int,int> indexes1 = aMTRAC[diagram[0] - 65];
         pair<int,int> indexes2 = aMTRAC[diagram[1] - 65];
+   
         int row1 = indexes1.first, col1 = indexes1.second,
             row2 = indexes2.first, col2 = indexes2.second;
         if(row1 == row2){
@@ -149,12 +152,13 @@ string encryption(string plainText){
 }
 
 string decryption(const string cipherText){
-    vector<string> diagrams = wordsIntoDiagrams(cipherText);
+     // we can use this, since we won't be having any repeated letters in a diagram.
+    // vector<string> diagrams = wordsIntoDiagrams(cipherText); but not needed. 
     string plainText = "";
-    for(string diagram: diagrams){
+     for(int i=0;i<cipherText.size();i = i+2){
         string plainTextDiagram = "";
-        pair<int,int> indexes1 = aMTRAC[diagram[0] - 65];
-        pair<int,int> indexes2 = aMTRAC[diagram[1] - 65];
+        pair<int,int> indexes1 = aMTRAC[cipherText[i] - 65];
+        pair<int,int> indexes2 = aMTRAC[cipherText[i+1] - 65];
         int row1 = indexes1.first, col1 = indexes1.second,
             row2 = indexes2.first, col2 = indexes2.second;
         if(row1 == row2){
