@@ -4,7 +4,7 @@ Date: 10-Sept-2019
 
 # Playfair cipher
 1. key is string.
-2. Alphabetset is just( ABCD..Z ) size = 25
+2. Alphabet set is just( ABCD..Z ) size = 26
 3. construct 5 X 5 matrix. (club i and j).
 4. Asumption: letters in Diagram are not same. 
 Encipher
@@ -20,6 +20,11 @@ Decipher
  1.If both letter is in same column, take the above element.(cylically)
  2.If both letter is in same row, take the left element.(cylically)
  3.If letter are in different row and column, take corner letter's in the same row
+ 
+ Some Additional Notes:
+    - unlike traditional playfair cipher, there is another method.
+        -If we leave two same letter in the diagram,they will be encoded by moving down and right one square.
+        -whereas in traditional play cipher, atomatically X is added
 */
 #include<iostream>
 #include<vector>
