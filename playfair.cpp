@@ -25,6 +25,9 @@ Decipher
     - unlike traditional playfair cipher, there is another method.
         -If we leave two same letter in the diagram,they will be encoded by moving down and right one square.
         -whereas in traditional play cipher, atomatically X is added
+#TODO:
+    - Add support to include numbers, punctuations.
+        - Simple. they don't encode to anything. they remain as it is. BA2M => LK2JC (say)
 */
 #include<iostream>
 #include<vector>
