@@ -13,13 +13,14 @@ Encipher
     - ex: BALLOON => BA LL .. (same letters LL) => BA LX LO ON
     - ex: MOOC => MO OC
     - ex: MAGIC => MA GI CX
- 1.If both letter is in same column, take the beneath element.(cylically)
- 2.If both letter is in same row, take the right element.(cylically)
- 3.If letter are in different row and column, take corner letter in the same row
+ 3.If both letter is in same column, take the beneath element.(cylically)
+ 4.If both letter is in same row, take the right element.(cylically)
+ 5.If letter are in different row and column, take corner letter in the same row
 Decipher
- 1.If both letter is in same column, take the above element.(cylically)
- 2.If both letter is in same row, take the left element.(cylically)
- 3.If letter are in different row and column, take corner letter's in the same row
+ 1. Break the words into diagrams (chunks of 2 letters)
+ 2.If both letter is in same column, take the above element.(cylically)
+ 3.If both letter is in same row, take the left element.(cylically)
+ 4.If letter are in different row and column, take corner letter's in the same row
  
  Some Additional Notes:
     - unlike traditional playfair cipher, there is another method.
