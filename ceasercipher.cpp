@@ -3,7 +3,7 @@ Author: Manoj kumar R
 Date: 10-Sept-2019
 Some notes:
 
-- charecter is represented in ascii, i.e A=65,a = 97
+- character is represented in ascii, i.e A=65,a = 97
 - 'a' + 2 = 'c'(i.e 99)
 */
 #include<iostream>
